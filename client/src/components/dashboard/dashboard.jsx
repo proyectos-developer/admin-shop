@@ -1,5 +1,14 @@
 import React from 'react'
 
+import Estadisticas from './estadisticas.jsx'
+import Pedidos from './pedidos.jsx'
+import Desempeño from './desempeño.jsx'
+import ItemsMasVendidos from './itemsmasvendidos.jsx'
+import TerminosMasBuscados from './terminosmasbuscados.jsx'
+import Actividad from './actividad.jsx'
+import Calificaciones from './calificaciones.jsx'
+import Tips from './tips.jsx'
+
 export default function Dashboard({proporcional}) {
 
     return (
@@ -27,24 +36,81 @@ export default function Dashboard({proporcional}) {
                         </p>
                     </div>
                 </div>
-                <div className='d-flex justify-content-between' style={{width: '100%', height: 180 / proporcional}}>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                <div className='' style={{width: '100%', height: 'auto', marginBottom: 32 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                    <Estadisticas proporcional={proporcional}/>
+                </div>
+                <div className='d-flex' style={{width: '100%', height: 'auto'}}>
+                    <div className='d-flex' style={{width: '50%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Pedidos recientes
+                        </p>
                     </div>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                    <div className='d-flex' style={{width: '50%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Hoy
+                        </p>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            {'>'}
+                        </p>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Desempeño
+                        </p>
                     </div>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                </div>
+                <div className='d-flex' style={{width: '100%', heigh: 'auto', marginBottom: 32 / proporcional}}>
+                    <div style={{width: '50%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <Pedidos proporcional={proporcional}/>
                     </div>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                    <div style={{width: '50%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <Desempeño proporcional={proporcional}/>
                     </div>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                </div>
+                <div className='d-flex' style={{width: '100%', height: 'auto'}}>
+                    <div className='d-flex' style={{width: '50%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Items más vendidos
+                        </p>
                     </div>
-                    <div className='shadow rounded' style={{width: '15%', height: 180 / proporcional, background: 'white'}}>
-
+                    <div className='d-flex' style={{width: '50%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Términos más buscados
+                        </p>
+                    </div>
+                </div>
+                <div className='d-flex' style={{width: '100%', heigh: 'auto', marginBottom: 32 / proporcional}}>
+                    <div style={{width: '50%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <ItemsMasVendidos proporcional={proporcional}/>
+                    </div>
+                    <div style={{width: '50%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <TerminosMasBuscados proporcional={proporcional}/>
+                    </div>
+                </div>
+                <div className='d-flex' style={{width: '100%', height: 'auto'}}>
+                    <div className='d-flex' style={{width: '40%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Actividad
+                        </p>
+                    </div>
+                    <div className='d-flex' style={{width: '40%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Calificaciones recientes
+                        </p>
+                    </div>
+                    <div className='d-flex' style={{width: '20%', height: 32 / proporcional, marginBottom: 16 / proporcional, paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, marginBottom: 14 / proporcional, color: 'rgb(28, 163, 94)', fontWeight: 400}}>
+                            Tips
+                        </p>
+                    </div>
+                </div>
+                <div className='d-flex' style={{width: '100%', heigh: 'auto', marginBottom: 32 / proporcional}}>
+                    <div style={{width: '40%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <Actividad proporcional={proporcional}/>
+                    </div>
+                    <div style={{width: '40%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <Calificaciones proporcional={proporcional}/>
+                    </div>
+                    <div style={{width: '20%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                        <Tips proporcional={proporcional}/>
                     </div>
                 </div>
             </div>
