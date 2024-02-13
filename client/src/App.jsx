@@ -37,11 +37,11 @@ function App() {
                                      width < 991 ? <GlobalPanelTablet proporcional={991 / width}/> : 
                                                    <GlobalPanel       proporcional={1920 / width} />}>
                 <Route path='' element={width < 500 ? <GlobalDashboardCell   proporcional={499 / width}/> : 
-                                      width < 991 ? <GlobalDashboardTablet proporcional={991 / width}/> : 
-                                                    <GlobalDashboard       proporcional={1920 / width} />}>
+                                        width < 991 ? <GlobalDashboardTablet proporcional={991 / width}/> : 
+                                                      <GlobalDashboard       proporcional={1920 / width} />}>
                     <Route index element={width < 500 ? <DashboardCell   proporcional={499 / width}/> : 
-                                            width < 991 ? <DashboardTablet proporcional={991 / width}/> : 
-                                                          <Dashboard       proporcional={1920 / width} />}/>
+                                          width < 991 ? <DashboardTablet proporcional={991 / width}/> : 
+                                                        <Dashboard       proporcional={1920 / width} />}/>
                 </Route>
                                                     
             </Route>
