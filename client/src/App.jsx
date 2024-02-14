@@ -15,6 +15,19 @@ import Dashboard from './components/dashboard/dashboard.jsx'
 import DashboardTablet from './components/dashboard/dashboardtablet.jsx'
 import DashboardCell from './components/dashboard/dashboardcell.jsx'
 
+import ProductPanel from './components/product/panel.jsx'
+import ProductPanelTablet from './components/product/paneltablet.jsx'
+import ProductPanelCell from './components/product/panelcell.jsx'
+
+import ProductList from './components/product/list.jsx'
+import ProductListTablet from './components/product/listtablet.jsx'
+import ProductListCell from './components/product/listcell.jsx'
+
+import ProductNuevo from './components/product/nuevo.jsx'
+import ProductNuevoTablet from './components/product/nuevotablet.jsx'
+import ProductNuevoCell from './components/product/nuevocell.jsx'
+
+
 function App() {
   const [width, setWidth] = useState (window.outerWidth)
 
@@ -42,6 +55,16 @@ function App() {
                     <Route index element={width < 500 ? <DashboardCell   proporcional={499 / width}/> : 
                                           width < 991 ? <DashboardTablet proporcional={991 / width}/> : 
                                                         <Dashboard       proporcional={1920 / width} />}/>
+                    <Route path='productos' element={width < 500 ? <ProductPanelCell   proporcional={499 / width}/> : 
+                                                     width < 991 ? <ProductPanelTablet proporcional={991 / width}/> : 
+                                                                   <ProductPanel       proporcional={1920 / width} />}>
+                      <Route index element={width < 500 ? <ProductListCell   proporcional={499 / width}/> : 
+                                            width < 991 ? <ProductListTablet proporcional={991 / width}/> : 
+                                                          <ProductList       proporcional={1920 / width} />}/>
+                      <Route path='nuevo' element={width < 500 ? <ProductNuevoCell   proporcional={499 / width}/> : 
+                                                   width < 991 ? <ProductNuevoTablet proporcional={991 / width}/> : 
+                                                                 <ProductNuevo       proporcional={1920 / width} />}/>
+                    </Route>
                 </Route>
                                                     
             </Route>

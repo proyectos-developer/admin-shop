@@ -103,13 +103,13 @@ export default function Dashboard({proporcional}) {
                     </div>
                 </div>
                 <div className='d-flex' style={{width: '100%', heigh: 'auto', marginBottom: 32 / proporcional}}>
-                    <div style={{width: '40%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                    <div style={{width: '35%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
                         <Actividad proporcional={proporcional}/>
                     </div>
-                    <div style={{width: '40%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                    <div style={{width: '35%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
                         <Calificaciones proporcional={proporcional}/>
                     </div>
-                    <div style={{width: '20%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
+                    <div style={{width: '30%', height: 'auto', paddingLeft: 12 / proporcional, paddingRight: 12 / proporcional}}>
                         <Tips proporcional={proporcional}/>
                     </div>
                 </div>

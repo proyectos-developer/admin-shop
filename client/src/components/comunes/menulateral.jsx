@@ -16,10 +16,11 @@ import icono_settings from '../../assets/iconos/icono_settings_white_96.png'
 import icono_right from '../../assets/iconos/icono_right_white_96.png'
 import icono_down from '../../assets/iconos/icono_down_white_96.png'
 
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 export default function MenuLateral({proporcional}) {
 
+    const navigate = useNavigate()
     const location = useLocation ()
     
     const [menu, setMenu] = useState ('inicio')
@@ -38,8 +39,8 @@ export default function MenuLateral({proporcional}) {
 
     return (
         <div className='position-relative' style={{width: 300 / proporcional, paddingTop: 32 / proporcional, paddingBottom: 32 / proporcional, paddingLeft: 16 / proporcional,
-                paddingRight: 16 / proporcional, borderTopRightRadius: 16 / proporcional, borderBottomRightRadius: 16 / proporcional}}>
-            <div className='position-fixed'>
+                paddingRight: 16 / proporcional, borderTopRightRadius: 16 / proporcional, borderBottomRightRadius: 16 / proporcional, height: 'auto'}}>
+            <div className='position-fixed' style={{height: 'auto'}}>
                 <div className='d-flex justify-content-center' style={{width: 268 / proporcional, height: 'auto', marginBottom: 20 / proporcional}}>
                     <p style={{fontSize: 35 / proporcional, lineHeight: `${35 / proporcional}px`, marginBottom: 0, fontWeight: 600, color: 'white',
                         textAlign: 'center'}}>
@@ -103,7 +104,8 @@ export default function MenuLateral({proporcional}) {
                                     <div className='' style={{width: 172 / proporcional, height: 40 / proporcional, cursor: 'pointer', background: sub_menu_opciones === 'lista-productos' ? '#34ad6f' : 'none',
                                             borderRadius: 16 / proporcional, paddingTop: 11 / proporcional, paddingBottom: 11 / proporcional, paddingLeft: 16 / proporcional,
                                             paddingRight: 16 / proporcional}}
-                                            onMouseOver={() => setSubMenuOpciones('lista-productos')} onMouseLeave={() => setSubMenuOpciones('')}>
+                                            onMouseOver={() => setSubMenuOpciones('lista-productos')} onMouseLeave={() => setSubMenuOpciones('')}
+                                            onClick={() => navigate ('/productos')}>
                                         <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, color: 'white', fontWeight: 400, paddingBottom: 0}}>
                                             Lista
                                         </p>
@@ -111,9 +113,10 @@ export default function MenuLateral({proporcional}) {
                                     <div className='' style={{width: 172 / proporcional, height: 40 / proporcional, cursor: 'pointer', background: sub_menu_opciones === 'detalles-productos' ? '#34ad6f' : 'none',
                                             borderRadius: 16 / proporcional, paddingTop: 11 / proporcional, paddingBottom: 11 / proporcional, paddingLeft: 16 / proporcional,
                                             paddingRight: 16 / proporcional}}
-                                            onMouseOver={() => setSubMenuOpciones('detalles-productos')} onMouseLeave={() => setSubMenuOpciones('')}>
+                                            onMouseOver={() => setSubMenuOpciones('detalles-productos')} onMouseLeave={() => setSubMenuOpciones('')}
+                                            onClick={() => navigate ('/productos/nuevo')}>
                                         <p style={{fontSize: 14 / proporcional, lineHeight: `${18 / proporcional}px`, color: 'white', fontWeight: 400, marginBottom: 0}}>
-                                            Detalles
+                                            Nuevo
                                         </p>                    
                                     </div>
                                 </div>
